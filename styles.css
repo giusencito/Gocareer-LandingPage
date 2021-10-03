@@ -1,0 +1,273 @@
+:root{
+    --celeste:#0288D1;
+    --azul:#212121;
+    
+    --firstfont:'Open Sans', sans-serif;
+    --secondfont:'Roboto', sans-serif;
+}
+*
+{
+  margin: 0;
+  padding: 0;
+} 
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    min-height: 100%;
+    /*Puede poner min-height pero cuando la pantalla es pequenia y la imagen principal de contact se hace muy grande hace que los logos se bajen mas y el gradiente no cubre todo*/
+}
+body{
+    background-image: linear-gradient(#f6f6f6,#bad2ee);
+    min-height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.navegacion{
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        flex-direction: row;
+        gap: 4rem;
+        justify-content: flex-end;
+    }
+}
+.navegacion__enlace{
+    text-decoration: none;
+    color: var(--celeste);
+    font-family: var(--firstfont);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+.navbar__logo{
+   width: 100%;
+}
+.image{
+    max-height: 5rem;
+}
+@media (min-width: 768px) {
+    .image{
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+.effects::after{
+    content: ' ';
+    display: block;
+    width: 0;
+    height: 0.2rem;
+    background: var(--celeste);
+    transition: width .3s;
+    margin-top: 1rem;
+}
+.effects:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+@media (min-width: 769px) {
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 1440px) {
+    .grid{
+        margin-top: 10rem;
+    }
+}
+.inicio__image{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.div__left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.div__left h2{
+    font-family: var(--firstfont);
+    font-weight: 400;
+    font-size: 6rem;
+}
+.div__left span{
+    font-weight: 700;
+}
+@media (max-width: 769px) {
+    .div__left h2{
+        text-align: center;
+    }
+}
+.div__left p{
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-family: var(--secondfont);
+}
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.download__image{
+    width: 100%;
+    max-width: 20rem;
+    padding: 2rem;
+    cursor: pointer;
+}
+.ios{
+    margin-top: .5rem;
+}
+/*
+CONTACT US
+*/
+@media (min-width: 769px) {
+    .grid__contact{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+.grid__contact{
+    margin-top: 5rem;
+}
+@media (max-width: 1440px) {
+    .grid__contact{
+        margin-top: 10rem;
+    }
+}
+.contact__image{
+    max-width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.grid__contact__image{
+    padding: 2rem;
+}
+.social__image{
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+.social__image:hover{
+    cursor: pointer;
+}
+
+.social__network{
+     display: flex;
+     justify-content: space-around;
+}
+.page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .content-wrap {
+    padding-bottom: 4rem;    /* Footer height */
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;            /* Footer height */
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+/* FORM */
+
+  .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form h3{
+    font-family: var(--secondfont);
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: center;
+}
+.form h2{
+    font-family: var(--firstfont);
+    text-align: center;
+    font-size: 1.8rem;
+}
+form p{
+    font-family: var(--firstfont);
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+form p:nth-child(1){
+    margin-top: 1rem;
+}
+form input{
+    width: 100%;
+}
+.buttom{
+    display: flex;
+    justify-content: center;
+}
+.send__button{
+    font-family: var(--secondfont);
+    padding: .3rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* GOCAREER */
+
+.container__cards{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+@media (min-width: 769px) {
+    .container__cards{
+        flex-direction: row;
+    }
+}
+.card__image{
+    max-width: 55%;
+    display: block;
+    margin: auto;
+}
+@media (min-width: 1024px) {
+    .card__image{
+        height: 40rem;
+    }
+}
+.cards h3{
+    font-family: var(--firstfont);
+    font-size: 1.6rem;
+}
+.cards p{
+    font-family: var(--secondfont);
+    font-size: 1.4rem;
+}
+.cards{
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 5%;
+    border-width: .3rem;
+    border-style: solid;
+    border-color: var(--celeste);
+}
+.containerq{
+    max-width: 95%;
+    margin: 0 auto;
+}
